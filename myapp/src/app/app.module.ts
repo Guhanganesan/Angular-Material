@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { EmployeeComponent } from './employee/employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table'
+import { MatPaginatorModule } from '@angular/material/paginator'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {MatTableModule} from '@angular/material/table'
     MatSliderModule,
     MatButtonModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
