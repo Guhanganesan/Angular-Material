@@ -6,14 +6,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EmployeeService {
  
-  private url = "http://localhost:5000/get_employee";
+  private url = "http://localhost:5000";
 
   constructor(public http: HttpClient) {  
   }  
 
   getEmployeeData() {
-    console.log(this.http.get<any[]>(this.url))  
-    return this.http.get<any[]>(this.url);  
-  }  
+    return this.http.get<any[]>(this.url+"/get_employee");  
+  }
+  
+  submitEmpData(emp_data:any){
+    const headers = { 'content-type': 'application/json'}  
+    return this.http.post(`${this.url}/publish_employee`, emp_data, {'headers':headers});
+  }
 
 }

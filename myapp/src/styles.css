@@ -35,3 +35,10 @@ section {
     justify-content: center;
     width: 120px;
   }
+
+
+  .progress_spinner_style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
