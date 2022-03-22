@@ -95,12 +95,21 @@ export class EmployeeComponent implements OnInit {
       }
       this._http.submitEmpData(entire_data).subscribe((val:any)=>{
         console.log(val)
+        const dialogRef = this.dialogRef.open(ModelDialogComponent,{
+          width:"50%"
+        })
         if(val["status"] == "success"){
           this.submit_status = false;
-          alert("Successfully Published")
+          //alert("Successfully Published");
+          dialogRef.componentInstance.success_msg = "Thank You!";
+          dialogRef.componentInstance.user_value = val["msg"]
+         
         }else{
           this.submit_status = false;
-          alert("Error publishing employee details")
+          //alert("Error publishing employee details")
+          dialogRef.componentInstance.success_msg = "Sorry!";
+          dialogRef.componentInstance.user_value = val["msg"];
+          
         }
       })
   }
@@ -109,8 +118,8 @@ export class EmployeeComponent implements OnInit {
       const dialogRef = this.dialogRef.open(ModelDialogComponent,{
         width:"50%"
       })
-      dialogRef.componentInstance.user_value = "This is user value";
-
+      dialogRef.componentInstance.user_value = "You have successfully submitted your data!";
+      dialogRef.componentInstance.success_msg = "Thank You!";
   }
 
 

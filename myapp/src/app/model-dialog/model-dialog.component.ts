@@ -11,12 +11,13 @@ export class ModelDialogComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<ModelDialogComponent>) { }
 
   @Input() user_value:any;
+  @Input() success_msg:any;
 
 
   ngOnInit(): void {
   }
 
-  
+
    
 
 }
