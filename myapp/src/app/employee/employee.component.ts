@@ -4,6 +4,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {EmpElement} from './employee.interface';
+import {ModelDialogComponent} from '../model-dialog/model-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-employee',
@@ -13,7 +15,10 @@ import {EmpElement} from './employee.interface';
 
 export class EmployeeComponent implements OnInit {
 
-  constructor(private _http:EmployeeService, private fb:FormBuilder) { }
+  constructor(
+    private _http:EmployeeService, 
+    private fb:FormBuilder,
+    private dialogRef: MatDialog) { }
 
   public empForm!: FormGroup;
   minDate = new Date();
@@ -98,6 +103,14 @@ export class EmployeeComponent implements OnInit {
           alert("Error publishing employee details")
         }
       })
+  }
+
+  openDialog(){
+      const dialogRef = this.dialogRef.open(ModelDialogComponent,{
+        width:"50%"
+      })
+      dialogRef.componentInstance.user_value = "This is user value";
+
   }
 
 
