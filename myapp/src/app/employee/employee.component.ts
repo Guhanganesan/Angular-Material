@@ -123,6 +123,12 @@ export class EmployeeComponent implements OnInit {
   }
 
 
+  testToken(){
+    this._http.testBearerToken().subscribe((val:any)=>{
+      console.log(val)
+    })
+  }
+
 }
 
 
