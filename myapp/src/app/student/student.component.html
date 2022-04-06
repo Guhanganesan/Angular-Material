@@ -1,84 +1,85 @@
-<div class="form-container">
+<form [formGroup]="student_form" (ngSubmit)="onSubmit(student_form)">
+    <div class="form-container">
+            
+        <!-- Hide required marker (asterix) and auto float label -->
+        <mat-form-field [hideRequiredMarker]="true" [floatLabel]="'auto'">
+            <input matInput placeholder="First Name" formControlName="first_name" required>
+        </mat-form-field>
+            
+        <!-- Show required marked (asterix) and auto float label -->
+        <mat-form-field [floatLabel]="'auto'">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" formControlName="last_name" required>
+        </mat-form-field>
+        
+        <!-- Always float label -->
+        <mat-form-field [floatLabel]="'always'">
+            <mat-label>Nickname</mat-label>
+            <input matInput placeholder="Nickname" formControlName="nick_name">
+        </mat-form-field>
+        
+        <!-- Disable float label -->
+        <mat-form-field [floatLabel]="'never'">
+            <mat-label>Family Name</mat-label>
+            <input matInput placeholder="Family Name" formControlName="family_name">
+        </mat-form-field>
 
-    <!-- Hide required marker (asterix) and auto float label -->
-    <mat-form-field [hideRequiredMarker]="true" [floatLabel]="'auto'">
-        <input matInput placeholder="First Name" required>
-    </mat-form-field>
-          
-    <!-- Show required marked (asterix) and auto float label -->
-    <mat-form-field [floatLabel]="'auto'">
-        <mat-label>Last Name</mat-label>
-        <input matInput placeholder="Last Name" required>
-    </mat-form-field>
-    
-    <!-- Always float label -->
-    <mat-form-field [floatLabel]="'always'">
-        <mat-label>Nickname</mat-label>
-        <input matInput placeholder="Nickname">
-    </mat-form-field>
-    
-    <!-- Disable float label -->
-    <mat-form-field [floatLabel]="'never'">
-        <mat-label>Family Name</mat-label>
-        <input matInput placeholder="Family Name">
-    </mat-form-field>
-  
-    <mat-form-field>
-      <textarea matInput placeholder="Enter Address"></textarea>
-    </mat-form-field>
-  
-    <mat-form-field>
-      <mat-select placeholder="Select District">
-        <mat-option value="option">Chennai</mat-option>
-        <mat-option value="option">Madurai</mat-option>
-        <mat-option value="option">Covai</mat-option>
-        <mat-option value="option">Trichy</mat-option>
-        <mat-option value="option">Nellai</mat-option>
-        <mat-option value="option">Ramnad</mat-option>
-      </mat-select>
-    </mat-form-field>
+        <br>
 
+        <mat-form-field>
+        <textarea matInput placeholder="Enter Address" formControlName="address"></textarea>
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field>
+        <mat-select placeholder="Select District" formControlName="district">
+            <mat-option value="option">Chennai</mat-option>
+            <mat-option value="option">Madurai</mat-option>
+            <mat-option value="option">Covai</mat-option>
+            <mat-option value="option">Trichy</mat-option>
+            <mat-option value="option">Nellai</mat-option>
+            <mat-option value="option">Ramnad</mat-option>
+        </mat-select>
+        </mat-form-field>
 
-    <!-- Legacy form field -->
-    
-    <mat-form-field appearance="legacy">
-        <mat-label>Email Address:</mat-label>
-        <input matInput placeholder="Your email">
-        <mat-icon matSuffix>mail_outline</mat-icon>
-        <mat-hint>Input the fully qualified email address</mat-hint>
-    </mat-form-field>
+        <br>
+        <!-- Legacy form field -->
+        <mat-form-field appearance="legacy">
+            <mat-label>Email Address:</mat-label>
+            <input matInput placeholder="Your email" formControlName="email">
+            <mat-icon matSuffix>mail_outline</mat-icon>
+            <mat-hint>Input the fully qualified email address</mat-hint>
+        </mat-form-field>
 
+        <br>
+        <!-- Standard form field -->
+        <mat-form-field appearance="standard">
+            <mat-label>Mobile Number:</mat-label>
+            <input matInput placeholder="Your Mobile" formControlName="mobile">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-hint>Mobile number with Country code</mat-hint>
+        </mat-form-field>
+        
+        <br>
+        <!-- Fill form field -->
+        <mat-form-field appearance="fill">
+            <mat-label>Username:</mat-label>
+            <input matInput placeholder="Your username" formControlName="username">
+            <mat-icon matSuffix>person_outline</mat-icon>
+            <mat-hint>Use unique username</mat-hint>
+        </mat-form-field>
+        
+        <br>
+        <!-- Outline form field -->
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Your password" formControlName="password">
+            <mat-icon matSuffix>lock</mat-icon>
+            <mat-hint>Min 8 char 1 number and 1 alpha</mat-hint>
+        </mat-form-field>
+        <br>
 
-    <!-- Standard form field -->
-    
-    <mat-form-field appearance="standard">
-        <mat-label>Phone Number:</mat-label>
-        <input matInput placeholder="Your Phone">
-        <mat-icon matSuffix>phone</mat-icon>
-        <mat-hint>Phone number with Country code</mat-hint>
-    </mat-form-field>
-    
+        <button mat-raised-button color="primary">submit</button>
 
-    <!-- Fill form field -->
-    
-    <mat-form-field appearance="fill">
-        <mat-label>Username:</mat-label>
-        <input matInput placeholder="Your username">
-        <mat-icon matSuffix>person_outline</mat-icon>
-        <mat-hint>Use unique username</mat-hint>
-    </mat-form-field>
-    
-
-    <!-- Outline form field -->
-
-    <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="Your password">
-        <mat-icon matSuffix>lock</mat-icon>
-        <mat-hint>Min 8 char 1 number and 1 alpha</mat-hint>
-    </mat-form-field>
-    <br>
-    
-    <button mat-raised-button color="primary">submit</button>
-     
-</div>
+    </div>
+</form>
