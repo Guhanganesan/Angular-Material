@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 //Components
 import { EmployeeComponent } from './employee/employee.component';
 
@@ -20,17 +21,22 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ModelDialogComponent } from './model-dialog/model-dialog.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { StudentComponent } from './student/student.component';
+import {MatIconModule} from '@angular/material/icon';
+import { MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent,
-    ModelDialogComponent
+    EmployeeComponent, 
+    ModelDialogComponent, 
+    StudentComponent
   ],
   imports: [
     BrowserModule,
@@ -49,14 +55,17 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatFormFieldModule,
     MatNativeDateModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    MatIconModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
       multi: true
-    }
+    },
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
   ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
