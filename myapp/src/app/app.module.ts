@@ -30,6 +30,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { StudentComponent } from './student/student.component';
 import {MatIconModule} from '@angular/material/icon';
 import { MatSelectModule} from '@angular/material/select';
+import { PlaylistComponent } from './playlist/playlist.component';
+import { MatCardModule } from "@angular/material/card";
 
 
 @NgModule({
@@ -37,7 +39,7 @@ import { MatSelectModule} from '@angular/material/select';
     AppComponent,
     EmployeeComponent, 
     ModelDialogComponent, 
-    StudentComponent
+    StudentComponent, PlaylistComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { MatSelectModule} from '@angular/material/select';
     MatCheckboxModule,
     MatDialogModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [
     {
