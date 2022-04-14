@@ -36,12 +36,15 @@ import { ValidationExampleComponent } from './forms/validation-example/validatio
 import { UploadFilesComponent } from './upload-files/upload-files.component';
 
 
-@NgModule({
+@NgModule({ 
   declarations: [
     AppComponent,
     EmployeeComponent, 
     ModelDialogComponent, 
-    StudentComponent, PlaylistComponent, ValidationExampleComponent, UploadFilesComponent
+    StudentComponent, 
+    PlaylistComponent, 
+    ValidationExampleComponent, 
+    UploadFilesComponent
   ],
   imports: [
     BrowserModule,
