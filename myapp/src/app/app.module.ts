@@ -32,6 +32,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatSelectModule} from '@angular/material/select';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { MatCardModule } from "@angular/material/card";
+import { ValidationExampleComponent } from './forms/validation-example/validation-example.component';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { MatCardModule } from "@angular/material/card";
     AppComponent,
     EmployeeComponent, 
     ModelDialogComponent, 
-    StudentComponent, PlaylistComponent
+    StudentComponent, PlaylistComponent, ValidationExampleComponent
   ],
   imports: [
     BrowserModule,

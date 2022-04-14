@@ -1,0 +1,26 @@
+<h2>Validation Example!</h2>
+
+<form [formGroup]="myform">
+    <mat-form-filed>
+        <mat-label>
+            Enter Name:
+        </mat-label>
+        <input matInput formControlName="name" (blur)="checkName()">
+        <mat-error *ngIf="name_status">Please enter name!</mat-error>
+        <mat-error *ngIf="name_char_status">Use only alphabets!</mat-error>
+    </mat-form-filed> 
+    <br><br>
+    <mat-form-filed>
+        <mat-label>
+            Enter Email:
+        </mat-label>
+        <input matInput formControlName="email" (input)="checkEmail()">
+        <mat-error *ngIf="email_status">Please enter email!</mat-error>
+        <mat-error *ngIf="email_char_status">Use proper domain name like ...@gmail.com </mat-error>
+    </mat-form-filed>
+
+    <br>
+    <br>
+    <button (click)="submit()" [disabled]="myform.status == 'INVALID' || email_char_status">submit</button>
+</form>
+
