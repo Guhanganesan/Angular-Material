@@ -4,7 +4,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { StudentComponent } from './student/student.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { ValidationExampleComponent } from './forms/validation-example/validation-example.component';
-
+import {UploadFilesComponent} from './upload-files/upload-files.component'
 const routes: Routes = [
   {
     path:'employee-list', component: EmployeeComponent
@@ -17,6 +17,9 @@ const routes: Routes = [
   },
   {
     path:'validation-example', component: ValidationExampleComponent
+  },
+  {
+    path:'upload-files', component:UploadFilesComponent
   }
 ];
 

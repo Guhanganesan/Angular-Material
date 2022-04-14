@@ -1,0 +1,7 @@
+<input type="file" (change)="upload($event)"  accept="image/x-png,image/gif,image/jpeg"
+type="file"
+multiple>
+
+<div *ngIf="isSingleUploaded" class="success">
+     File uploaded successfully with Url: <b>{{urlAfterUpload}}</b>
+</div>

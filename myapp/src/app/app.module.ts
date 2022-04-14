@@ -33,6 +33,7 @@ import { MatSelectModule} from '@angular/material/select';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { MatCardModule } from "@angular/material/card";
 import { ValidationExampleComponent } from './forms/validation-example/validation-example.component';
+import { UploadFilesComponent } from './upload-files/upload-files.component';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { ValidationExampleComponent } from './forms/validation-example/validatio
     AppComponent,
     EmployeeComponent, 
     ModelDialogComponent, 
-    StudentComponent, PlaylistComponent, ValidationExampleComponent
+    StudentComponent, PlaylistComponent, ValidationExampleComponent, UploadFilesComponent
   ],
   imports: [
     BrowserModule,
