@@ -1,2 +1,9 @@
 <p>manager works!</p>
-<app-manager-details [manager_details]="manager"></app-manager-details>
+<!-- single object-->
+<!-- <app-manager-details [manager_details]="manager"></app-manager-details> -->
+
+<!-- For multiple objects-->
+<ng-container *ngFor="let manager of manager_data">
+    <app-manager-details [manager_details]="manager"></app-manager-details>
+</ng-container>
+
