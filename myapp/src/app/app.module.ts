@@ -36,6 +36,7 @@ import { ValidationExampleComponent } from './forms/validation-example/validatio
 import { UploadFilesComponent } from './upload-files/upload-files.component';
 import { ManagerComponent } from './decorators-examples/manager/manager.component';
 import { ManagerDetailsComponent } from './decorators-examples/manager/manager-details/manager-details.component';
+import { BasicsComponent } from './basics/basics.component';
 
 
 @NgModule({ 
@@ -46,7 +47,7 @@ import { ManagerDetailsComponent } from './decorators-examples/manager/manager-d
     StudentComponent, 
     PlaylistComponent, 
     ValidationExampleComponent, 
-    UploadFilesComponent, ManagerComponent, ManagerDetailsComponent
+    UploadFilesComponent, ManagerComponent, ManagerDetailsComponent, BasicsComponent
   ],
   imports: [
     BrowserModule,

@@ -6,8 +6,12 @@ import { PlaylistComponent } from './playlist/playlist.component';
 import { ValidationExampleComponent } from './forms/validation-example/validation-example.component';
 import {UploadFilesComponent} from './upload-files/upload-files.component';
 import { ManagerComponent } from './decorators-examples/manager/manager.component';
+import { BasicsComponent } from './basics/basics.component';
 
 const routes: Routes = [
+  {
+    path:'basics', component: BasicsComponent
+  },
   {
     path:'employee-list', component: EmployeeComponent
   },
