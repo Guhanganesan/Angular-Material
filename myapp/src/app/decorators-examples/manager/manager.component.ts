@@ -49,5 +49,9 @@ export class ManagerComponent implements OnInit, AfterViewInit {
       console.log(item.manager_details)
     })
   }
+
+  displayEmittedValue(event:any){
+    console.log(event)
+  }
   
 }

@@ -7,3 +7,5 @@
     <app-manager-details [manager_details]="manager"></app-manager-details>
 </ng-container>
 
+<!-- Event Emitter Example-->
+<app-manager-details (valueChange)="displayEmittedValue($event)"> </app-manager-details>

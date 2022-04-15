@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-manager-details',
@@ -8,9 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ManagerDetailsComponent implements OnInit {
 
   @Input() manager_details:any;
+  @Output() valueChange = new EventEmitter();
 
   area_name:string;
   pin_code:number;
+  public counter = 0;
 
   constructor() { }
 
@@ -29,6 +31,11 @@ export class ManagerDetailsComponent implements OnInit {
   childDetails(){
     this.area_name = "Ambedkar Street";
     this.pin_code =  777777;
+  }
+
+  valueChanged() { // You can give any function name
+      this.counter = this.counter + 1;
+      this.valueChange.emit(this.counter);
   }
 
 }
