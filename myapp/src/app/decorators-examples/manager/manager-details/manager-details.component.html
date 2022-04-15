@@ -1,2 +1,5 @@
-<p>manager-details works!</p>
-<button (click)="valueChanged()">Click me</button> 
+<!-- <p>manager-details works!</p>
+<button (click)="valueChanged()">Click me</button>  -->
+
+<input type='number' [(ngModel)]='updatedstockvalue'/> 
+<button [style.background]='color'(click)="stockValueChanged()">Change Stock Value</button>

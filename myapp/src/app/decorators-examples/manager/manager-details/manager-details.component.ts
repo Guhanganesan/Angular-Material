@@ -9,6 +9,11 @@ export class ManagerDetailsComponent implements OnInit {
 
   @Input() manager_details:any;
   @Output() valueChange = new EventEmitter();
+  @Input() stock: number;
+  @Input() productId: number;
+  @Output() stockValueChange = new EventEmitter();
+  color = '';
+  updatedstockvalue: number;
 
   area_name:string;
   pin_code:number;
@@ -36,6 +41,20 @@ export class ManagerDetailsComponent implements OnInit {
   valueChanged() { // You can give any function name
       this.counter = this.counter + 1;
       this.valueChange.emit(this.counter);
+  }
+
+  stockValueChanged() {
+    this.stockValueChange.emit({ id: this.productId, updatdstockvalue: this.updatedstockvalue });
+    this.updatedstockvalue = null;
+  }
+
+  ngOnChanges() {
+      if (this.stock > 10) {
+          this.color = 'green';
+      } else {
+          this.color = 'red';
+      }
+      console.log(this.color)
   }
 
 }

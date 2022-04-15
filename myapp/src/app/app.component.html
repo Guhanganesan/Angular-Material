@@ -1,28 +1,24 @@
-<h2>Welcome to Angular Material</h2>
+<h2 style="color:blue; text-align: center;">Welcome to Angular Material</h2>
 <!-- <app-employee></app-employee> -->
-
-<br />
-<a routerLink="employee-list">Employee</a>
-
-<br />
-<br />
-<a routerLink="student-list">Student</a>
-
-<br />
-<br />
-<a routerLink="play-list">Playlist</a>
-
-<br />
-<br/>
-<a routerLink="validation-example">Validation Example</a>
-<br>
-<br>
-<a routerLink="upload-files">File Upload Example</a>
-<br>
-<br>
-<a routerLink="decorators-examples">Decorator Example</a>
-<br>
-<br>
-
-
-<router-outlet></router-outlet>
+<div style="margin-left:100px;">
+        <table id="customers">
+                <tr>
+                    <th>Employee</th>
+                    <th>Student</th>
+                    <th>Playlist</th>
+                    <th>Validation Example</th>
+                    <th>File Upload Example</th>
+                    <th>Decorator Example</th>
+                </tr>
+                <tr>
+                    <td><a routerLink="employee-list">Employee</a></td>
+                    <td><a routerLink="student-list">Student</a></td>
+                    <td><a routerLink="play-list">Playlist</a></td>
+                    <td><a routerLink="validation-example">Validation Example</a></td>
+                    <td><a routerLink="upload-files">File Upload Example</a></td>
+                    <td><a routerLink="decorators-examples">Decorator Example</a></td>
+                </tr>
+            </table>
+            
+            <router-outlet></router-outlet>
+</div>

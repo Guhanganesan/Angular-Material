@@ -1,11 +1,34 @@
-<p>manager works!</p>
+<!-- <p>manager works!</p> -->
 <!-- single object-->
 <!-- <app-manager-details [manager_details]="manager"></app-manager-details> -->
 
 <!-- For multiple objects-->
-<ng-container *ngFor="let manager of manager_data">
+<!-- <ng-container *ngFor="let manager of manager_data">
     <app-manager-details [manager_details]="manager"></app-manager-details>
-</ng-container>
+</ng-container> -->
 
 <!-- Event Emitter Example-->
-<app-manager-details (valueChange)="displayEmittedValue($event)"> </app-manager-details>
+<!-- <app-manager-details (valueChange)="displayEmittedValue($event)"> </app-manager-details> -->
+
+<div style="margin-left:50px;">
+    <h1>{{title}}</h1>
+    <table id="customers">
+        <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Status</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{p.id}}</td>
+                <td>{{p.title}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.stock}}</td>
+                <td><app-manager-details [productId]='p.id' [stock]='p.stock' (stockValueChange)='changeStockValue($event)'></app-manager-details></td>
+            </tr>
+        </tbody>
+    </table>
+        
+</div>
