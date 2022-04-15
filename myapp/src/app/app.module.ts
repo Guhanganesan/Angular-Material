@@ -34,6 +34,8 @@ import { PlaylistComponent } from './playlist/playlist.component';
 import { MatCardModule } from "@angular/material/card";
 import { ValidationExampleComponent } from './forms/validation-example/validation-example.component';
 import { UploadFilesComponent } from './upload-files/upload-files.component';
+import { ManagerComponent } from './decorators-examples/manager/manager.component';
+import { ManagerDetailsComponent } from './decorators-examples/manager/manager-details/manager-details.component';
 
 
 @NgModule({ 
@@ -44,7 +46,7 @@ import { UploadFilesComponent } from './upload-files/upload-files.component';
     StudentComponent, 
     PlaylistComponent, 
     ValidationExampleComponent, 
-    UploadFilesComponent
+    UploadFilesComponent, ManagerComponent, ManagerDetailsComponent
   ],
   imports: [
     BrowserModule,

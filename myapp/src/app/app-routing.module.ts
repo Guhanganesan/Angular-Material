@@ -4,7 +4,9 @@ import { EmployeeComponent } from './employee/employee.component';
 import { StudentComponent } from './student/student.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { ValidationExampleComponent } from './forms/validation-example/validation-example.component';
-import {UploadFilesComponent} from './upload-files/upload-files.component'
+import {UploadFilesComponent} from './upload-files/upload-files.component';
+import { ManagerComponent } from './decorators-examples/manager/manager.component';
+
 const routes: Routes = [
   {
     path:'employee-list', component: EmployeeComponent
@@ -20,6 +22,9 @@ const routes: Routes = [
   },
   {
     path:'upload-files', component:UploadFilesComponent
+  },
+  {
+    path:'decorators-examples', component:ManagerComponent
   }
 ];
 
